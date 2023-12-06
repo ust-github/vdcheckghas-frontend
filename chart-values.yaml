@@ -1,0 +1,14 @@
+image:
+  repository: artifactory.dagility.com/docker/vdcheckghas-frontend
+  tag: latest
+  pullPolicy: Always
+ingress:
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: nginx-internal
+  hosts:
+  - host: vdcheckghas-frontend-default.dagility.com
+    paths:
+    - /
+serviceAccount:
+  create: false
